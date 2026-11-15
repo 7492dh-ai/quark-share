@@ -1,55 +1,44 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#eef4ff">
-<title>完整版资源入口</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>资源入口确认</title>
 <style>
-*{box-sizing:border-box}
-:root{--blue:#2878f0;--deep:#175ac7;--ink:#1f2d43;--muted:#748198}
-body{margin:0;min-height:100vh;padding:28px 16px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 15% 15%,#dceaff 0,transparent 34%),radial-gradient(circle at 90% 85%,#e0f3ff 0,transparent 32%),#f4f7fc;font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink)}
-.wrap{width:min(100%,520px)}
-.topline{height:5px;border-radius:10px 10px 0 0;background:linear-gradient(90deg,#55a7ff,#286be9)}
-.panel{background:#fff;border:1px solid #e4eaf3;border-top:0;border-radius:0 0 18px 18px;padding:30px 30px 24px;box-shadow:0 20px 65px #23466b18}
-.brand{display:flex;align-items:center;justify-content:center;gap:8px;color:#3978d8;font-size:12px;letter-spacing:2px;font-weight:700}
-.brand i{width:7px;height:7px;border-radius:50%;background:#3e8af5;display:inline-block}
-h1{font-size:27px;line-height:1.35;text-align:center;margin:17px 0 9px;font-weight:750;letter-spacing:.3px}
-.sub{text-align:center;color:var(--muted);font-size:14px;line-height:1.8;margin:0 auto 23px}
-.status{display:flex;align-items:center;gap:12px;padding:15px 16px;background:#f0f6ff;border:1px solid #dceaff;border-radius:12px;margin-bottom:18px}
-.statusicon{width:38px;height:38px;flex:none;border-radius:11px;background:#dceaff;color:#246bd8;display:grid;place-items:center;font-size:21px;font-weight:700}
-.status strong{display:block;font-size:14px;margin-bottom:3px;color:#235da9}
-.status small{display:block;color:#7488a5;font-size:12px;line-height:1.5}
-.steps{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 19px}
-.step{border:1px solid #e8edf5;border-radius:11px;padding:12px 13px;display:flex;gap:9px;align-items:center}
-.num{width:23px;height:23px;display:grid;place-items:center;border-radius:50%;background:#edf3ff;color:#3977d8;font-size:12px;font-weight:700;flex:none}
-.step b{display:block;font-size:13px}.step small{display:block;color:#8994a5;font-size:11px;margin-top:3px}
-.notice{padding:13px 15px;background:#f7f9fc;border-radius:10px;color:#758196;font-size:12px;line-height:1.8;margin-bottom:20px}
-a.cta{height:50px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:linear-gradient(100deg,#3888f6,#2464d9);color:white;text-decoration:none;font-size:16px;font-weight:700;box-shadow:0 7px 18px #2e72df35;transition:transform .15s,filter .15s}
-a.cta:hover{filter:brightness(1.04);transform:translateY(-1px)}
-.footer{text-align:center;color:#a0aaba;font-size:11px;line-height:1.7;margin:16px 4px 0}
-@media(max-width:420px){.panel{padding:25px 19px 20px}h1{font-size:24px}.steps{grid-template-columns:1fr}}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;background:linear-gradient(135deg,#edf3ff,#f8faff 52%,#eaf5ff);font-family:Arial,"Microsoft YaHei",sans-serif;color:#26364d}
+.card{width:min(100%,430px);background:#fff;border:1px solid #e3eaf5;border-radius:13px;box-shadow:0 14px 42px #284b7718;overflow:hidden}
+.head{height:5px;background:#2878ee}.inner{padding:28px 27px 23px;text-align:center}
+.logo{font-size:12px;letter-spacing:2px;color:#7b8ba4;font-weight:700}
+h1{font-size:24px;margin:15px 0 9px;color:#26364d}.desc{font-size:14px;line-height:1.8;color:#7a879a;margin:0 0 22px}
+.state{display:flex;align-items:center;text-align:left;gap:13px;padding:16px;border-radius:9px;margin:0 0 18px;background:#fff7ee;border:1px solid #ffe5c6}
+.state.ok{background:#effaf3;border-color:#d3efdc}.symbol{width:40px;height:40px;border-radius:50%;background:#ffead2;color:#d47b19;display:grid;place-items:center;font-size:23px;flex:none}.ok .symbol{background:#d9f3e1;color:#239b53}
+.state b{font-size:15px;display:block;margin-bottom:5px}.state small{font-size:12px;color:#8995a5;line-height:1.5;display:block}
+.tip{background:#f5f7fb;border-radius:8px;padding:13px 14px;text-align:left;font-size:12px;color:#7a8798;line-height:1.85;margin-bottom:19px}
+.action{display:block;width:100%;border:0;border-radius:8px;padding:14px 10px;background:#3478e5;color:white;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer}
+.action:hover{background:#2869d1}.foot{font-size:11px;color:#a0aaba;line-height:1.7;margin:15px 0 0}
+@media(max-width:460px){.inner{padding:24px 19px 20px}}
 </style>
 </head>
-<body>
-<main class="wrap">
-<div class="topline"></div>
-<section class="panel">
-<div class="brand"><i></i> RESOURCE ACCESS <i></i></div>
-<h1>完整版点这里</h1>
-<p class="sub">资源分享入口已准备好，点击下方按钮即可前往网盘查看内容。</p>
-<div class="status">
-<div class="statusicon">↗</div>
-<div><strong>资源入口已就绪</strong><small>这是第三方分享引导页，不代表任何平台的官方验证结果</small></div>
-</div>
-<div class="steps">
-<div class="step"><span class="num">1</span><div><b>查看页面提示</b><small>确认资源来源与跳转地址</small></div></div>
-<div class="step"><span class="num">2</span><div><b>前往夸克网盘</b><small>在网盘页面查看分享内容</small></div></div>
-</div>
-<div class="notice">温馨提示：本页面仅提供资源跳转，不属于哔哩哔哩或夸克官方页面；不会检测、记录或伪造点赞、投币、收藏等互动状态。请以夸克网盘实际显示的内容为准。</div>
-<a class="cta" href="https://pan.quark.cn/s/17e5fee55d12" target="_blank" rel="noopener noreferrer">前往夸克网盘　→</a>
-<p class="footer">请确认链接来源后再访问。点击按钮将打开夸克网盘分享页面。</p>
-</section>
-</main>
-</body>
-</html>
+<body><main class="card"><div class="head"></div><section class="inner">
+<div class="logo">RESOURCE ACCESS</div>
+<h1>资源分享入口</h1>
+<p class="desc">请按页面提示操作，进入资源分享页面。</p>
+<div id="state" class="state"><div class="symbol">!</div><div><b>页面尚未刷新</b><small>请点击下方按钮刷新页面，更新入口状态</small></div></div>
+<div class="tip">温馨提示：这是第三方资源引导页，不属于哔哩哔哩或夸克官方页面。本页面无法检测点赞、投币、收藏等互动状态，刷新仅更新本页面的入口显示状态。</div>
+<div id="action"></div>
+<p class="foot">请确认资源来源。点击开放后的按钮将前往夸克网盘分享页面。</p>
+</section></main>
+<script>
+const key='quark_resource_page_refreshed';
+const refreshed=sessionStorage.getItem(key)==='yes';
+const state=document.getElementById('state');
+const action=document.getElementById('action');
+if(refreshed){
+ state.className='state ok';
+ state.innerHTML='<div class="symbol">✓</div><div><b>资源入口已开放</b><small>页面状态已更新，可以前往查看分享内容</small></div>';
+ action.innerHTML='<a class="action" href="https://pan.quark.cn/s/17e5fee55d12" target="_blank" rel="noopener noreferrer">前往夸克网盘　→</a>';
+}else{
+ action.innerHTML='<button class="action" id="refresh">刷新页面</button>';
+ document.getElementById('refresh').addEventListener('click',()=>{sessionStorage.setItem(key,'yes');location.reload()});
+}
+</script>
+</body></html>
